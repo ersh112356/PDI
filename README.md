@@ -69,6 +69,6 @@ Error e2 = Injector.of(1);
 }
 
 It’s much more elegant and very easy to maintain. But it comes in the price of giving up the supporting of inner dependencies.
-The code can be found here:
+
 
 
