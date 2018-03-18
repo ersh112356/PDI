@@ -43,11 +43,13 @@ public class BasicModule extends AbstractModule {
 
 And to glue it altogether:
 public static void main(String[] args){
+
     Injector injector = Guice.createInjector(new BasicModule());
     Communication comms = injector.getInstance(Communication.class);
 }
 
-We can use Annotation for that as well.
+We can use Annotation for that as well:
+
 @Inject @Named("GoogleCommunicator")
 Communicator communicator;
  
@@ -58,6 +60,7 @@ Integer integer = Injector.of("java.lang.Integer","0");
 That’s it! A single line of code.
 
 We can also annotate the method:
+
 @Inject(name="java.lang.Integer",values={"0"})
 public void someMethod(){
     // Using the annotation above.
@@ -65,6 +68,7 @@ public void someMethod(){
 }
 
 Or for a few local variables:
+
 @Inject(name="java.lang.Integer",values={"0"})
 @Inject(name="java.lang.Error",values={"Dummy 1"})
 public void someMethod(){
