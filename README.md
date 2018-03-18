@@ -70,7 +70,6 @@ public void someMethod(){
 Or for a few local variables:
 
 @Inject(name="java.lang.Integer",values={"0"})
-
 @Inject(name="java.lang.Error",values={"Dummy 1"})
 public void someMethod(){
      // Using the annotations above.
