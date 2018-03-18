@@ -8,6 +8,7 @@ Then somehow push the implementation into the code. On Sunday we invoke the firs
 A more elegant solution is to use java reflection to inject the implementation via Class.forName(). 
 That was true back than when we didn’t have frameworks such as Guice (https://github.com/google/guice) and others.
 We only need to add something like this:
+
 public interface Communication{
   
     public Data getData(String locator);
